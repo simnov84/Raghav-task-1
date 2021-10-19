@@ -1,0 +1,71 @@
+Task 1
+// Print the name list - As an array
+const scores = [
+  {
+    marks: 32,
+    name: "Yvette Merritt"
+  },
+  {
+    marks: 57,
+    name: "Lillian Ellis"
+  },
+  {
+    marks: 22,
+    name: "Mccall Carter"
+  },
+  {
+    marks: 21,
+    name: "Pate Collier"
+  },
+  {
+    marks: 91,
+    name: "Debra Beard"
+  },
+  {
+    marks: 75,
+    name: "Nettie Hancock"
+  },
+  {
+    marks: 20,
+    name: "Hatfield Hodge"
+  }
+];
+console.log(scores.map(({name}) => name));
+
+
+
+ Task 2
+// >=40 pass.. find those student that passed (Use array method)
+console.log(scores.filter(scores => scores.marks >= 40));
+
+
+
+ Task 3
+//  Find all the names who failed the exams (Array methods)
+var names = scores.filter(scores => scores.marks <= 40);
+console.log(names.map(({name}) => name));
+
+
+
+Task 4
+// Find the Average marks
+var count = 0;
+var num = scores.map(({marks})=>marks);
+var avg;
+for(var i=0;i<num.length;i++){
+  count = count+num[i];
+}
+avg = count/7;
+console.log(avg);
+
+
+Task 5
+// Find the topper's name
+var num = scores.map(({marks})=>marks);
+var max = num[0];
+for(var i=0;i<num.length;i++){
+  if(num[i]>max)
+    max=num[i];
+}
+console.log(max);
+
